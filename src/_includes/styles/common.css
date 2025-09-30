@@ -1,0 +1,221 @@
+.links-box {
+    & a {
+        color: var(--fg);
+        text-decoration: none;
+        font: var(--text-caption-bold);
+        letter-spacing: var(--text-caption-spacing);
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        padding: 10px;
+        border-radius: var(--border-radius-small);
+        white-space: nowrap;
+
+        & svg {
+            display: block;
+            fill: currentColor;
+        }
+
+        &:hover {
+            color: var(--bg-2);
+            background: var(--fg);
+        }
+    }
+}
+
+.semi-transparent {
+    opacity: 0.5;
+}
+
+/* Prices */
+.price {
+    text-align: center;
+    width: stretch;
+    padding: 10px;
+    font: var(--text-body);
+    border-radius: var(--border-radius-small);
+}
+
+.price-new {
+    margin: 0;
+    color: var(--bg-1);
+    background: var(--green);
+}
+
+.price-old {
+    margin: 0;
+    text-decoration: line-through;
+    background: var(--grey-1);
+}
+
+.price-sale {
+    .price-new {
+        text-align: right;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .price-old {
+        text-align: left;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+}
+
+/* Badges */
+.badge {
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    transform: rotate(45deg);
+    padding: 2px 40px;
+    font: var(--text-body);
+    transition: all 0.3s ease;
+    color: var(--bg-3);
+    opacity: 0.9;
+
+    &:hover {
+        background: var(--bg-3);
+    }
+}
+
+.badge-fg {
+    background: var(--fg);
+
+    &:hover {
+        color: var(--fg);
+    }
+}
+
+.badge-grey-1 {
+    background: var(--grey-1);
+
+    &:hover {
+        color: var(--grey-1);
+    }
+}
+
+.badge-grey-2 {
+    background: var(--grey-2);
+
+    &:hover {
+        color: var(--grey-2);
+    }
+}
+
+.badge-black {
+    background: var(--black);
+
+    &:hover {
+        color: var(--black);
+    }
+}
+
+.badge-red {
+    background: var(--red);
+
+    &:hover {
+        color: var(--red);
+    }
+}
+
+.badge-orange {
+    background: var(--orange);
+
+    &:hover {
+        color: var(--orange);
+    }
+}
+
+.badge-yellow {
+    background: var(--yellow);
+
+    &:hover {
+        color: var(--yellow);
+    }
+}
+
+.badge-green {
+    background: var(--green);
+
+    &:hover {
+        color: var(--green);
+    }
+}
+
+.badge-cyan {
+    background: var(--cyan);
+
+    &:hover {
+        color: var(--cyan);
+    }
+}
+
+.badge-blue {
+    background: var(--blue);
+
+    &:hover {
+        color: var(--blue);
+    }
+}
+
+.badge-violet {
+    background: var(--violet);
+
+    &:hover {
+        color: var(--violet);
+    }
+}
+
+/* Hover Attention */
+.hover-attention {
+    &:hover {
+        background: var(--bg-2);
+
+        .shine {
+            background-image: linear-gradient(
+                270deg,
+                #fff0 48.44%,
+                var(--light-bg-a) 75.52%,
+                #fff0 100%
+            );
+            background-repeat: no-repeat;
+            animation: bg-move linear 5s infinite;
+        }
+    }
+
+    @media (hover: none) {
+        .shine {
+            background-image: linear-gradient(
+                270deg,
+                #fff0 48.44%,
+                var(--light-bg-a) 75.52%,
+                #fff0 100%
+            );
+            background-repeat: no-repeat;
+            animation: bg-move linear 5s infinite;
+        }
+    }
+}
+
+.shine {
+    transition: background-color 0.3s ease;
+}
+
+@-webkit-keyframes bg-move {
+    0% {
+        background-position: -500px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes bg-move {
+    0% {
+        background-position: -500px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}

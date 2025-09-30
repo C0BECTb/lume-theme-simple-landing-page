@@ -1,0 +1,27 @@
+.footer-container {
+    background: var(--bg-a);
+    border-top: solid 1px var(--bg-2);
+}
+
+.footer-sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-links {
+    margin: auto;
+    list-style: none;
+    max-width: var(--max-width);
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+
+    & svg {
+        width: 20px;
+        height: 20px;
+    }
+}

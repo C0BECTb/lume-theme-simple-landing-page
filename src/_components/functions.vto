@@ -1,0 +1,62 @@
+{{ export function displayBadges (item) }}
+  {{ if item.sold_out }}
+    <span class="badge sold-out">
+      {{ badges.sold_out }}
+    </span>
+  {{ else if item.sale_percent }}
+    <span class="badge sale-percent">
+      -{{ item.sale_percent }} %
+    </span>
+  {{ else if item.new }}
+    <span class="badge new">
+      {{ badges.new }}
+    </span>
+  {{ else if item.best_seller }}
+    <span class="badge best-seller">
+      {{ badges.best_seller }}
+    </span>
+  {{ else if item.popular }}
+    <span class="badge popular">
+      {{ badges.popular }}
+    </span>
+  {{ /if }}
+{{ /export }}
+
+{{ export function displayPrice (item, type) }}
+  {{ if ( item.sold_out && item.sale_price ) }}
+    <p class="price price-old">
+      {{ item.sale_price }}
+    </p>
+  {{ else if ( item.sold_out && item.price ) }}
+    <p class="price price-old">
+      {{ item.price }}
+    </p>
+  {{ else if ( item.sale_price && item.price ) }}
+    {{ if type === "catalog" }}
+      <div class="landing-catalog-figure-footer price-sale">
+    {{ else if type == "cards" }}
+      <div class="landing-cards-footer price-sale">
+    {{ else }}
+    <div class="price-sale">
+    {{ /if }}
+        <p class="price price-new shine">
+          {{ item.sale_price }}
+        </p>
+        <p class="price price-old">
+          {{ item.price }}
+        </p>
+      </div>
+  {{ else if item.sale_price }}
+    <p class="price price-new shine">
+      {{ item.sale_price }}
+    </p>
+  {{ else if item.price }}
+    <p class="price price-new shine">
+      {{ item.price }}
+    </p>
+  {{ /if }}
+{{ /export }}
+
+{{ export function displayBorderedBox (obj) }}
+
+{{ /export }}

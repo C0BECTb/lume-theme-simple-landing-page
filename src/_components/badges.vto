@@ -1,0 +1,17 @@
+{{ import { priceChangePercent } from "./priceChangePercent.vto" }}
+
+{{ for object of item.badge }}
+  {{ if object.color }}
+    <span class="badge badge-{{ object.color }}">
+      {{- if object.title }}
+        {{- object.title -}}
+      {{ else }}
+        {{ for value of item.price }}
+          {{ if ( value.old && value.new ) }}
+            {{ priceChangePercent(value.old, value.new) }}
+          {{ /if }}
+        {{ /for }}
+      {{ /if -}}
+    </span>
+  {{ /if }}
+{{ /for }}

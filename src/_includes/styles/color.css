@@ -1,0 +1,63 @@
+:root {
+    color-scheme: light dark;
+
+    /* One Light */
+    --light-fg: oklch(0.3496 0.0141 274.5);
+    --light-bg-a: color-mix(in oklab, var(--light-bg-1) 90%, transparent);
+    --light-bg-1: oklch(0.9851 0 0);
+    --light-bg-2: oklch(0.9551 0 0);
+    --light-bg-3: oklch(0.9249 0 0);
+    --light-bg-4: oklch(0.8945 0 0);
+    --light-bg-5: oklch(0.8359 0 0);
+    --light-grey-1: oklch(0.71 0.0087 278.58);
+    --light-grey-2: oklch(0.6096 0.0065 264.52);
+    --light-black: oklch(0.1739 0.0041 285.97);
+
+    --light-red: oklch(0.6391 0.1792 28.34);
+    --light-orange: oklch(0.5537 0.1156 76.94);
+    --light-yellow: oklch(0.6584 0.138 76.2);
+    --light-green: oklch(0.6381 0.1419 143.46);
+    --light-cyan: oklch(0.5814 0.1271 237.19);
+    --light-blue: oklch(0.6017 0.193 263.25);
+    --light-violet: oklch(0.5236 0.211 328.78);
+
+    /* One Dark */
+    --dark-fg: oklch(0.7621 0.0202 262.99);
+    --dark-bg-a: color-mix(in oklab, var(--dark-bg-1) 90%, transparent);
+    --dark-bg-1: oklch(0.2925 0.0157 264.3);
+    --dark-bg-2: oklch(0.3292 0.0185 268.12);
+    --dark-bg-3: oklch(0.3665 0.0206 262.61);
+    --dark-bg-4: oklch(0.3691 0.023 271.77);
+    --dark-bg-5: oklch(0.263 0.0127 258.37);
+    --dark-grey-1: oklch(0.4983 0.0225 262.91);
+    --dark-grey-2: oklch(0.6353 0.0211 262.96);
+    --dark-black: oklch(0.2179 0.0103 268.21);
+
+    --dark-red: oklch(0.6729 0.1614 17.36);
+    --dark-orange: oklch(0.7273 0.0949 63.82);
+    --dark-yellow: oklch(0.8249 0.097 82.26);
+    --dark-green: oklch(0.7683 0.1103 133);
+    --dark-cyan: oklch(0.7231 0.0916 206.31);
+    --dark-blue: oklch(0.7304 0.1213 245.3);
+    --dark-violet: oklch(0.6936 0.1635 318.21);
+
+    /* light-dark */
+    --fg: light-dark(var(--light-fg), var(--dark-fg));
+    --bg-a: light-dark(var(--light-bg-a), var(--dark-bg-a));
+    --bg-1: light-dark(var(--light-bg-1), var(--dark-bg-1));
+    --bg-2: light-dark(var(--light-bg-2), var(--dark-bg-2));
+    --bg-3: light-dark(var(--light-bg-3), var(--dark-bg-3));
+    --bg-4: light-dark(var(--light-bg-4), var(--dark-bg-4));
+    --bg-5: light-dark(var(--light-bg-5), var(--dark-bg-5));
+    --grey-1: light-dark(var(--light-grey-1), var(--dark-grey-1));
+    --grey-2: light-dark(var(--light-grey-2), var(--dark-grey-2));
+    --black: light-dark(var(--light-black), var(--dark-black));
+
+    --red: light-dark(var(--light-red), var(--dark-red));
+    --orange: light-dark(var(--light-orange), var(--dark-orange));
+    --yellow: light-dark(var(--light-yellow), var(--dark-yellow));
+    --green: light-dark(var(--light-green), var(--dark-green));
+    --cyan: light-dark(var(--light-cyan), var(--dark-cyan));
+    --blue: light-dark(var(--light-blue), var(--dark-blue));
+    --violet: light-dark(var(--light-violet), var(--dark-violet));
+}

@@ -1,23 +1,41 @@
-# Lume Theme boilerplate
+# Simple Landing Page theme
 
-This is a boilerplate to create Lume themes
+[Lume](https://lume.land) theme to create a simple landing page.
 
-## Instructions
+## Install as a remote theme
 
-- Clone this repo or click the "Use this template" button on GitHub.
-- Update dependencies with `deno task lume upgrade`.
-- Change the files in the `src` folder.
-- Edit the `plugins.ts` file to add more plugins to your theme.
-- Edit the `mod.ts` file to configure the remote files.
-- Edit the `_cms.ts` file if you want to configure Lume CMS.
-- Edit the `LICENSE` file to set the author name and year.
-- Edit the `CHANGELOG.md` file. You can use the
-  [changelog](https://github.com/oscarotero/keep-a-changelog) library:
-  - Run `deno task changelog --publish` to publish the current version.
-  - Run `deno task changelog --create 0.2.0` to create the next version.
-- The `test` folder allows to test the theme as if it were loaded remotely.
-  - Enter in the `test` folder and run `deno task serve`. If it doesn't fail,
-    the theme works correctly.
-- Publish the theme on [deno.land/x](https://deno.land/x).
-- To include the theme in [lume.land/themes](https://lume.land/themes/),
-  [create a new issue here](https://github.com/lumeland/themes/issues).
+The **fastest and easiest** way to use this theme is by importing it as a remote
+module. It allows to create a landing page in seconds and update it at any time just by
+changing the version number in the import URL. Just add the following code to
+your `_config.ts` file:
+
+```ts
+import lume from "lume/mod.ts";
+import landingPage from "https://cdn.jsdelivr.net/gh/C0BECTb/lume_theme_simple_landing_page@v0.1.0/mod.ts";
+
+const site = lume();
+
+site.use(landingPage ());
+
+export default site;
+```
+
+Copy the [`index.yml`](./src/index.yml) file
+to your landing page root folder and edit it with your data.
+
+## Use it as a base template
+
+To use this theme as a base template for a more customized site, clone this repo
+or click the "Use this template" button on GitHub and edit the [_config.ts](./_config.ts) file.
+The source files are in the [src](./src/) folder.
+
+## Credits
+
+Crafted with ♥️ by [Andreas](https://github.com/C0BECTb)
+
+- Inspiration: [Durger King](https://t.me/DurgerKingBot) Telegram bot
+- Emojis: [Apple Color Emoji](https://en.wikipedia.org/wiki/Apple_Color_Emoji)
+- Color schemes: [One Dark](https://github.com/atom/one-dark-syntax) & [One Light](https://github.com/atom/one-light-syntax)
+- Typography: [IBM Plex®](https://www.ibm.com/plex/)
+
+[![Badge with text: Built with - Lume](<src/images/shields/Built with - Lume.svg>)](https://lume.land/) [![Badge with text: Using - Simple Landing Page theme](<src/images/shields/Using - Simple Landing Page theme.svg>)](https://github.com/C0BECTb/lume-theme-simple-landing-page/) [![Badge with text: Powered by - Deno](<src/images/shields/Powered by - Deno.svg>)](https://deno.com/) [![Badge with text: Runs on - GitHub Pages](<src/images/shields/Runs on - GitHub Pages.svg>)](https://pages.github.com/)

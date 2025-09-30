@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="{{ lang || metas.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ if (( title || metas.title ) && metas.site ) }}
+      <title>{{ title || metas.title }} - {{ metas.site }}</title>
+    {{ else if ( title || metas.title ) }}
+      <title>{{ title || metas.title }}</title>
+    {{ else if ( metas.site ) }}
+      <title>{{ metas.site }}</title>
+    {{ else }}
+      <title>Lume site</title>
+    {{ /if }}
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="/master.css" fetchpriority="high">
+    {{ for font of fonts }}
+      <link rel="preload"
+        href="{{ font }}"
+        as="font"
+        type="font/woff2"
+        crossorigin>
+    {{ /for }}
+    <link rel="canonical" href="{{ url |> url(true) }}">
+    {{ include "layouts/inline.vto" }}
+  </head>
+  <body>
+    {{ include "layouts/header.vto" }}
+    {{ content }}
+    {{ include "layouts/footer.vto" }}
+  </body>
+</html>

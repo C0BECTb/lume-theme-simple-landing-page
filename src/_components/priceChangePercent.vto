@@ -1,0 +1,15 @@
+{{ export function priceChangePercent (oldStr, newStr) }}
+  {{ function parse (string) }}
+    {{ parseFloat( string.replace(/[^\d.,]/g, '').replace(',', '.')) }}
+  {{ /function }}
+
+  {{ if (( typeof oldStr ) === "number" ) }}
+    {{ set oldNum = oldStr }}
+    {{ set newNum = newStr }}
+  {{ else }}
+    {{ set oldNum = parse(oldStr) }}
+    {{ set newNum = parse(newStr) }}
+  {{ /if }}
+
+  {{ Math.round(((newNum - oldNum) / oldNum) * 100) }} %
+{{ /export }}

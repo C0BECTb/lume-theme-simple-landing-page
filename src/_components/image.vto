@@ -1,0 +1,37 @@
+{{ if image.src }}
+  <img class="image"
+      {{ if image.alt }}
+        alt="{{ image.alt }}"
+      {{ /if }}
+      {{ if ( image.decoding === "auto" || decoding === "auto" ) }}
+        decoding="auto"
+      {{ else if ( image.decoding === "sync" || decoding === "sync" ) }}
+        decoding="sync"
+      {{ else }}
+        decoding="async"
+      {{ /if }}
+      {{ if ( image.priority === "high" || priority === "high" ) }}
+        fetchpriority="high"
+      {{ else if ( image.priority === "low" || priority === "low" ) }}
+        fetchpriority="low"
+      {{ /if }}
+      {{ if image.height }}
+        height="{{ image.height }}"
+      {{ else if height }}
+        height="{{ height }}"
+      {{ /if }}
+      {{ if !( image.loading === "eager" || loading === "eager" ) }}
+        loading="lazy"
+      {{ /if }}
+      src="{{ image.src }}"
+      {{ if image.width }}
+        width="{{ image.width }}"
+      {{ else if width }}
+        width="{{ width }}"
+      {{ /if }}
+      {{ if image.blur_hash }}
+        style="background-image: url('data:image/gif;base64,{{ image.blur_hash }}');"
+        onload="this.style.background='none'"
+      {{ /if }}
+  />
+{{ /if }}

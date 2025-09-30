@@ -1,0 +1,11 @@
+{{ if  sticky_footer === true }}
+  <footer class="footer-container footer-sticky">
+{{ else }}
+  <footer class="footer-container">
+{{ /if }}
+
+  {{ if links.footer }}
+    {{ comp.linksBox({ links: links.footer }) }}
+  {{ /if }}
+
+</footer>

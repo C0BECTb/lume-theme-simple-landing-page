@@ -1,0 +1,49 @@
+<section class="landing-catalog" id="{{ id || 'catalog' }}">
+
+  {{ for item of catalog }}
+
+    <div class="landing-catalog-product hover-attention {{ if item.semi_transparent }}semi-transparent{{ /if }}">
+
+      {{ if ( item.img || item.price ) }}
+        <div class="landing-catalog-figure {{ if item.reversed }}landing-catalog-figure-right{{ /if }}">
+
+          {{ if item.badge }}
+            {{ comp.badges({ item }) }}
+          {{ /if }}
+
+          {{ if item.picture }}
+            {{ comp.picture({ picture: item.picture, width: 300, height: 300 }) }}
+          {{ /if }}
+
+          {{ comp.price({ item, type: "catalog" }) }}
+
+        </div>
+      {{ /if }}
+
+      {{ if ( item.title || item.long || item.short ) }}
+        <div class="landing-catalog-body {{ if item.reversed }}landing-catalog-body-left{{ /if }}">
+
+          {{ if item.title }}
+            <h2>{{ item.title }}</h2>
+          {{ /if }}
+
+          {{ for obj of item.long }}
+            {{ comp.borderedBox({ obj }) }}
+          {{ /for }}
+
+          {{ if item.short }}
+            <div class="landing-catalog-body-footer">
+              {{ for obj of item.short }}
+                {{ comp.borderedBox({ obj }) }}
+              {{ /for }}
+            </div>
+          {{ /if }}
+
+        </div>
+      {{ /if }}
+
+    </div>
+
+  {{ /for }}
+
+</section>

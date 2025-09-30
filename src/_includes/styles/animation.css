@@ -1,0 +1,13 @@
+:root {
+    --animation-duration: 0.2s;
+}
+
+:root.no-motion {
+    --animation-duration: 0s;
+}
+
+@media (prefers-reduced-motion) {
+    :root {
+        --animation-duration: 0s;
+    }
+}

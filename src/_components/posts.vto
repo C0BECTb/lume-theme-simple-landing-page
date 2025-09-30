@@ -1,0 +1,18 @@
+<section class="landing-posts" id="{{ id || 'posts' }}">
+  {{ for obj of posts }}
+  {{ for title, text of obj }}
+    <div class="landing-posts-body hover-attention">
+      <h2>
+        {{- title -}}
+      </h2>
+      <div>
+        {{ for paragraph of text }}
+          <p>
+            {{ paragraph }}
+          </p>
+        {{ /for }}
+      </div>
+    </div>
+  {{ /for }}
+  {{ /for }}
+</section>

@@ -1,0 +1,47 @@
+<nav class="header-container">
+  <div class="header">
+
+    <a href="#" class="header-logo link" aria-label="Jump to the top of the page">
+      {{ if favicon }}
+        {{ comp.image({ image: favicon, width: 50, height: 50, priority: "high", loading: "eager" }) }}
+      {{ /if }}
+      {{- metas.site -}}
+    </a>
+
+    {{ set navCount = 0 }}
+    {{ if sections }}
+      {{ for section of sections }}
+        {{ if section.nav }}
+          {{ set navCount = navCount + 1 }}
+        {{ /if }}
+      {{ /for }}
+    {{ /if }}
+    {{ if footer }}
+      {{ set navCount = navCount + 1 }}
+    {{ /if }}
+
+    {{ if navCount > 0 }}
+      <ul class="header-menu links-box">
+        {{ for section of sections }}
+          {{ if section.nav }}
+            {{ set label = section.id.replaceAll('-', ' ').replace(/\b\w/g, (c) => c.toUpperCase()) }}
+            <li>
+              <a href="#{{ section.id }}" title="{{ label }}" aria-label="Jump to {{ label }}">
+                {{ section.icon }}
+              </a>
+            </li>
+          {{ /if }}
+        {{ /for }}
+
+        {{ if footer }}
+          <li>
+            <a href="#footer" title="Footer" aria-label="Jump to the bottom of the page">
+              {{ icons.arrow_down }}
+            </a>
+          </li>
+        {{ /if }}
+      </ul>
+    {{ /if }}
+
+  </div>
+</nav>

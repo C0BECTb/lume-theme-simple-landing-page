@@ -1,0 +1,21 @@
+  <picture>
+    {{ if (( typeof picture.jxl ) === "string" ) }}
+      <source srcset="{{ picture.jxl }}" type="image/jxl">
+    {{ else if ( picture.jxl === true ) }}
+      <source srcset="{{ picture.src.replace(/\.[^.]+$/, '.jxl' ) }}" type="image/jxl">
+    {{ /if }}
+
+    {{ if (( typeof picture.avif ) === "string" ) }}
+      <source srcset="{{ picture.avif }}" type="image/avif">
+    {{ else if ( picture.avif === true ) }}
+      <source srcset="{{ picture.src.replace(/\.[^.]+$/, '.avif' ) }}" type="image/avif">
+    {{ /if }}
+
+    {{ if (( typeof picture.webp ) === "string" ) }}
+      <source srcset="{{ picture.webp }}" type="image/webp">
+    {{ else if ( picture.webp === true ) }}
+      <source srcset="{{ picture.src.replace(/\.[^.]+$/, '.webp' ) }}" type="image/webp">
+    {{ /if }}
+
+    {{ comp.image({ image: picture, width, height, decoding, priority, loading }) }}
+  </picture>

@@ -1,0 +1,22 @@
+:root {
+    --text-display-size: clamp(30px, 10vw, 75px);
+    --text-display-height: 0.95;
+    --text-display: 700 var(--text-display-size) / var(--text-display-height)
+        var(--font-serif);
+    --text-display-spacing: -0.045em;
+    --text-heading-size: clamp(20px, 8vw, 50px);
+    --text-heading: 700 var(--text-heading-size) / 1.1 var(--font-serif);
+    --text-heading-spacing: -0.03em;
+    --text-title-size: clamp(20px, 6vw, 30px);
+    --text-title: 600 var(--text-title-size) / 1.2 var(--font-serif);
+    --text-title-spacing: -0.03em;
+    --text-body-size: clamp(16px, 4vw, 20px);
+    --text-body: var(--text-body-size) / 1.65 var(--font-sans);
+    --text-body-bold: 600 var(--text-body-size) / 1.6 var(--font-sans);
+    --text-body-spacing: -0.015em;
+    --text-caption: 15px/1.6 var(--font-sans);
+    --text-caption-bold: 600 15px/1.6 var(--font-sans);
+    --text-caption-mini: 13px/1.6 var(--font-sans);
+    --text-caption-mini-bold: 600 13px/1.6 var(--font-sans);
+    --text-code: 16px/1.6 var(--font-mono);
+}

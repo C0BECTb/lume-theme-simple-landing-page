@@ -1,0 +1,99 @@
+---
+layout: ./master.vto
+page_css: landing.css
+---
+<main class="landing">
+  {{ if header }}
+    <header class="landing-header">
+
+      {{ if ( header.title || title || metas.title ) }}
+        <h1>{{ header.title || title || metas.title }}</h1>
+      {{ /if }}
+
+      {{ if (( header.description || description || metas.description ) && header.captions ) }}
+        <div class="landing-header-body">
+          <p>
+            {{ header.description || description || metas.description }}
+          </p>
+          {{ for item of header.captions }}
+            <p>
+              {{ item }}
+            </p>
+          {{ /for }}
+        </div>
+      {{ else if ( header.description || description || metas.description ) }}
+        <p class="landing-header-body">
+          {{ header.description || description || metas.description }}
+        </p>
+      {{ else if header.captions }}
+        {{ for item of header.captions }}
+          <p class="landing-header-body">
+            {{ item }}
+          </p>
+        {{ /for }}
+      {{ /if }}
+
+      {{ if header.picture }}
+        <figure class="landing-header-figure">
+          {{ comp.picture({ picture: header.picture, width: 400, height: 400, priority: "high", loading: "eager" }) }}
+        </figure>
+      {{ /if }}
+
+    </header>
+  {{ /if }}
+
+  {{ if sections }}
+    {{ for section of sections }}
+      {{ if section.posts }}
+        {{ comp.posts({ posts: section.posts, id: section.id }) }}
+
+      {{ else if section.cards }}
+        {{ comp.cards({ cards: section.cards, id: section.id }) }}
+
+      {{ else if section.catalog }}
+        {{ comp.catalog({ catalog: section.catalog, id: section.id }) }}
+      {{ /if }}
+    {{ /for }}
+  {{ /if }}
+
+  {{ if footer }}
+    <footer class="landing-footer" id="footer">
+
+      {{ if links.landing }}
+        {{ comp.linksBox({ links: links.landing }) }}
+      {{ /if }}
+
+      {{ for item of footer.footnotes }}
+        <p class="landing-footer-footnotes">
+          {{ item }}
+        </p>
+      {{ /for }}
+
+      {{ if footer.copyright }}
+        <p class="landing-footer-copyright">
+          {{ icons.copyright }} {{ Temporal.Now.plainDateTimeISO().year }} {{ footer.company || metas.site }}. {{ footer.copyright }}
+        </p>
+      {{ /if }}
+
+      {{ if author }}
+        <p class="landing-footer-copyright">
+          Crafted with {{ icons.favorite }} by <a href="{{ author.href }}">{{ author.name }}</a>
+        </p>
+      {{ /if }}
+
+      {{ if shields }}
+        <ul class="landing-footer-shields">
+          {{ for item of shields }}
+            <li>
+              <a href="{{ item.href }}">
+                {{ comp.image({ image: item.image, height: 20, priority: "low" }) }}
+              </a>
+            </li>
+          {{ /for }}
+        </ul>
+      {{ /if }}
+
+    </footer>
+  {{ /if }}
+
+</main>

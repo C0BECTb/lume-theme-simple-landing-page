@@ -1,0 +1,734 @@
+lang: &lang en
+layout: layouts/landing.vto
+title: &title The only fast food that is good for your health!
+description: &description Use this website to order fictional fast food.
+
+metas:
+  site: Durger King
+  title: *title
+  lang: *lang
+  description: *description
+  image: /images/card.png
+  icon: &icon /images/favicon.svg
+  color: ["#fafafa", "#282c34"]
+
+favicon:
+  src: *icon
+  blur_hash: R0lGODlhBAAEAPEAANkTAO96Be52BQAAACH5BAAAAAAALAAAAAAEAAQAAAIFhC2BelAAOw==
+  alt: A bold, yellow letter 'D' is centered on a solid red background.
+    The design is simple and striking, conveying a sense of strength and clarity.
+
+author:
+  name: C0BECTb
+  href: https://github.com/C0BECTb
+
+# switches
+sticky_footer: true
+# use_title_in_head_title
+
+fonts:
+  - /fonts/font-sans-100-normal-100-700-latin.woff2
+  - /fonts/font-serif-normal-600-latin.woff2
+  - /fonts/font-serif-normal-700-latin.woff2
+
+icons:
+  call: &icon-call <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e8eaed"><path d="M763-145q-121-9-229.5-59.5T339-341q-86-86-135.5-194T144-764q-2-21 12.29-36.5Q170.57-816 192-816h136q17 0 29.5 10.5T374-779l24 106q2 13-1.5 25T385-628l-97 98q20 38 46 73t57.97 65.98Q422-361 456-335.5q34 25.5 72 45.5l99-96q8-8 20-11.5t25-1.5l107 23q17 5 27 17.5t10 29.5v136q0 21.43-16 35.71Q784-143 763-145ZM255-600l70-70-17.16-74H218q5 38 14 73.5t23 70.5Zm344 344q35.1 14.24 71.55 22.62Q707-225 744-220v-90l-75-16-70 70ZM255-600Zm344 344Z"/></svg>
+  mail: &icon-mail <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e8eaed"><path d="M168-192q-29.7 0-50.85-21.16Q96-234.32 96-264.04v-432.24Q96-726 117.15-747T168-768h624q29.7 0 50.85 21.16Q864-725.68 864-695.96v432.24Q864-234 842.85-213T792-192H168Zm312-240L168-611v347h624v-347L480-432Zm0-85 312-179H168l312 179Zm-312-94v-85 432-347Z"/></svg>
+  location: &icon-location <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e8eaed"><path d="M480.21-480Q510-480 531-501.21t21-51Q552-582 530.79-603t-51-21Q450-624 429-602.79t-21 51Q408-522 429.21-501t51 21ZM480-191q119-107 179.5-197T720-549q0-105-68.5-174T480-792q-103 0-171.5 69T240-549q0 71 60.5 161T480-191Zm0 95Q323.03-227.11 245.51-339.55 168-452 168-549q0-134 89-224.5T479.5-864q133.5 0 223 90.5T792-549q0 97-77 209T480-96Zm0-456Z"/></svg>
+  copyright: <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e8eaed"><path d="M408-312h144q20.4 0 34.2-13.8Q600-339.6 600-360v-72h-72v48h-96v-192h96v48h72v-72q0-20.4-13.8-34.2Q572.4-648 552-648H408q-20.4 0-34.2 13.8Q360-620.4 360-600v240q0 20.4 13.8 34.2Q387.6-312 408-312Zm72.28 216Q401-96 331-126t-122.5-82.5Q156-261 126-330.96t-30-149.5Q96-560 126-629.5q30-69.5 82.5-122T330.96-834q69.96-30 149.5-30t149.04 30q69.5 30 122 82.5T834-629.28q30 69.73 30 149Q864-401 834-331t-82.5 122.5Q699-156 629.28-126q-69.73 30-149 30Zm-.28-72q130 0 221-91t91-221q0-130-91-221t-221-91q-130 0-221 91t-91 221q0 130 91 221t221 91Zm0-312Z"/></svg>
+  favorite: <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e8eaed"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Z"/></svg>
+  arrow_up: <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"/></svg>
+  arrow_down: <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+  storefront: &storefront <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M841-518v318q0 33-23.5 56.5T761-120H201q-33 0-56.5-23.5T121-200v-318q-23-21-35.5-54t-.5-72l42-136q8-26 28.5-43t47.5-17h556q27 0 47 16.5t29 43.5l42 136q12 39-.5 71T841-518Zm-272-42q27 0 41-18.5t11-41.5l-22-140h-78v148q0 21 14 36.5t34 15.5Zm-180 0q23 0 37.5-15.5T441-612v-148h-78l-22 140q-4 24 10.5 42t37.5 18Zm-178 0q18 0 31.5-13t16.5-33l22-154h-78l-40 134q-6 20 6.5 43t41.5 23Zm540 0q29 0 42-23t6-43l-42-134h-76l22 154q3 20 16.5 33t31.5 13ZM201-200h560v-282q-5 2-6.5 2H751q-27 0-47.5-9T663-518q-18 18-41 28t-49 10q-27 0-50.5-10T481-518q-17 18-39.5 28T393-480q-29 0-52.5-10T299-518q-21 21-41.5 29.5T211-480h-4.5q-2.5 0-5.5-2v282Zm560 0H201h560Z"/></svg>
+  lists: &lists <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M80-160v-160h160v160H80Zm240 0v-160h560v160H320ZM80-400v-160h160v160H80Zm240 0v-160h560v160H320ZM80-640v-160h160v160H80Zm240 0v-160h560v160H320Z"/></svg>
+
+labels:
+  call: &label-call Call a phone number
+  mail: &label-mail Send an email message
+  location: &label-location Open location
+
+links:
+  landing:
+    - title: Dubai, United Arab Emirates
+      href: https://www.openstreetmap.org/node/31248510
+      svg: *icon-location
+      label: *label-location
+
+  footer:
+    - title: +888 8888 8888
+      href: tel:+88888888888
+      svg: *icon-call
+      label: *label-call
+
+    - title: +888 0000 0000
+      href: tel:+88800000000
+      svg: *icon-call
+      label: *label-call
+
+    - title: durger.king@mailinator.com
+      href: mailto:durger.king@mailinator.com
+      svg: *icon-mail
+      label: *label-mail
+
+    - title: durger.king@sharklasers.com
+      href: mailto:durger.king@sharklasers.com
+      svg: *icon-mail
+      label: *label-mail
+
+###
+
+header:
+  title: The only <span>fast food</span> that is good for your health!
+  description: *description
+  captions: ~
+  picture:
+    src: /images/BurgerFries.svg
+    blur_hash: R0lGODlhBAAEAPIAAAAAAMiWHrZ4GOCEMN95PN2JMwAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMICBEwVSJCxRIAOw==
+    alt:
+      Illustration of a cheeseburger with sesame seed bun, layered with lettuce, cheese, and tomato, next to a box of fries.
+      Background is transparent.
+
+sections:
+  - id: posts-top
+    posts:
+      - Description:
+          - This is a demo of the <b>Simple Landing Page theme</b> for <b>Lume</b>, inspired by the <a href="https://t.me/durgerkingbot">Durger King Telegram bot</a>.
+          - It is built with <b>Apple Color Emoji, One Dark & One Light</b> color schemes, and <b>IBM Plex®</b> typography.
+
+  - id: cards
+    nav: true
+    icon: *storefront
+    cards:
+      - title: Cake
+        price:
+          - old: 🌟1
+        picture:
+          src: /images/products/Cake.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAANWbeNa8j+jLlufGiuPGmQAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMJCCEgVWO8IWJIADs=
+          alt: Shortcake Emoji.
+            A slice of strawberry shortcake, layered with whipped cream and topped with a whole strawberry.
+            Like the Birthday Cake, may be used to represent birthday celebrations or cake in general.
+
+      - title: Burger
+        description: |
+          Meat™
+        price:
+          - old: $4.99
+            new: $3.99
+        badge:
+          - color: red
+        picture:
+          src: /images/products/Burger.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAK1+QZdhHbJzN6p0J+WmXAAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMJCBEgVcIREchMADs=
+          alt: Hamburger Emoji.
+            A burger with a beef patty, usually depicted on a sesame bun with cheese, lettuce, and tomato—making it a cheeseburger,
+            though officially called Hamburger by Unicode.
+
+      - title: Fries
+        description: |
+          Po-ta-toes
+        price:
+          - old: $1.49
+        badge:
+          - title: Popular
+            color: blue
+        picture:
+          src: /images/products/Fries.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAANQ5ItIsG+dfKuqVHAAAAAAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMJCApBpGMoIUACADs=
+          alt: French Fries Emoji.
+            Thin-cut, golden-brown French fries, served in a red carton, as at McDonald’s.
+            Apple features Smiling Face With Smiling Eyes on its carton.
+
+      - title: Hotdog
+        description: |
+          0% Dog, 100% hot
+        price:
+          - old: $3.49
+        picture:
+          src: /images/products/Hotdog.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAK0wGs9gANd/JeuiNwAAAAAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMIOANAtMJBEhIAOw==
+          alt: Hot Dog Emoji.
+            The cooked sausage of a hot dog in a sliced bun and drizzled with yellow mustard, as eaten at a baseball game.
+
+      - title: Taco
+        description: |
+          Mucho más
+        price:
+          - old: $3.99
+        picture:
+          src: /images/products/Taco.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAMZsA4lkGNamNIF0KtSgMAAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMKCDMqVYSUIAQACQA7
+          alt: Taco Emoji.
+            A Mexican or Tex-Mex taco on a hard or soft corn tortilla, filled with such ingredients as beef, lettuce, tomato, cheese, and onion.
+            Apple’s design resembles a carne asada taco, with cilantro and white onion.
+
+      - title: Pizza
+        description: |
+          That's amore
+        price:
+          - old: $7.99
+        badge:
+          - title: NEW
+            color: yellow
+        picture:
+          src: /images/products/Pizza.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAOCCN9NvKuimS+KYVgAAAAAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMJCCMgDoAwGEACADs=
+          alt: Pizza Emoji.
+            A slice of pepperoni pizza.
+
+      - title: Donut
+        description: |
+          Hole included
+        price:
+          - old: $1.49
+        picture:
+          src: /images/products/Donut.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAALVyLJ9eP4hdN5laLQAAAAAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMICCJAPsORNhMAOw==
+          alt: Doughnut Emoji.
+            A chocolate-glazed donut (or doughnut) with rainbow sprinkles.
+            May resemble the Bagel at small sizes.
+
+      - title: Popcorn
+        description: |
+          Lights, camera, corn
+        price:
+          - old: $1.99
+        badge:
+          - title: NEW
+            color: yellow
+        picture:
+          src: /images/products/Popcorn.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAOmDf/fYkNtcZffTjfCXhe6ybwAAACH5BAEAAAAALAAAAAAEAAQAAAMICBFa1gOAERMAOw==
+          alt: Popcorn Emoji.
+            The buttery-white snack of popcorn brimming in a classic red-and-white-striped carton, as enjoyed at a movie theater.
+
+      - title: Coke
+        description: |
+          The liquid kind
+        price:
+          - old: $1.49
+        badge:
+          - title: Best seller
+            color: violet
+        picture:
+          src: /images/products/Coke.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAANN0fc9OXMGNks1ibQAAAAAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMICKpDKkKFABIAOw==
+          alt: Cup with Straw Emoji.
+            A drinking cup with a straw.
+            Depicted on many platforms as a disposable cup with a lid and bendy straw, as used to serve soft drinks at fast-food restaurants.
+            May be used for a range of non-alcoholic beverages, including milkshakes, smoothies, juice, and to-go beverages.
+
+      - title: Icecream
+        description: |
+          Cone of shame
+        price:
+          - old: $5.99
+        picture:
+          src: /images/products/Icecream.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAOTDkte0hPXx6eXTuAAAAAAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMJCDMARE2IFgJIADs=
+          alt: Soft Ice Cream Emoji.
+            A swirl of soft-serve ice cream atop a wafer-style cone, white or cream-colored, as vanilla, on most platforms.
+            May be used more generally for ice cream, frozen yogurt, and frozen treats.
+
+      - title: Cookie
+        description: |
+          Milk's favorite
+        price:
+          - old: $3.99
+        badge:
+          - title: Sold out
+            color: fg
+        semi_transparent: true
+        picture:
+          src: /images/products/Cookie.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAALR6R41PLOO7dKt+SaFtOgAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMJCDNKJIIUASBIADs=
+          alt: Cookie Emoji.
+            A golden-brown chocolate chip cookie or biscuit.
+            Used to represent cookies or biscuits in general.
+
+      - title: Flan
+        description: |
+          Flan-tastic
+        price:
+          - old: $7.99
+        picture:
+          src: /images/products/Flan.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAN7Tx8B7TtCfctvGo8CwoAAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMJCAoxEmSMskACADs=
+          alt: Custard Emoji.
+            A golden-yellow custard dessert, as a crème caramel or flan, topped with a layer of caramel.
+            Shown on a plate, molded in a ramekin-shape and often in a pool of caramel sauce.
+
+  - id: posts-middle
+    posts:
+      - Did you know?:
+          - You can add <b>Cards</b>, as shown above, and <b>Catalog</b>, as shown below.
+
+  - id: catalog
+    nav: true
+    icon: *lists
+    catalog:
+      - title: Sandwich
+        long:
+          - Description: |
+              Lunch-ready stack of white/wheat slices hugging lettuce, tomato, cheese, and a folded slice of deli ham
+          - Ingredients: |
+              wheat bread, lettuce, tomato, cheddar, ham, mayo
+        short:
+          - Qty: 1
+          - Weight: 170 g
+          - Cal.: 380
+        price:
+          - old: $4.99
+        picture:
+          src: /images/products/Sandwich.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAPnosKaDN/n3vdOlWfXgnwAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMJCBBAVUSQCIRKADs=
+          alt: Sandwich Emoji.
+            A sandwich, as eaten at lunch, made with lettuce, tomato, and cheese on slices of white or wheat bread.
+            Apple, Google, and WhatsApp add a deli meat that resembles ham.
+
+      - title: Burrito
+        long:
+          - Description: |
+              Foil-wrapped flour tortilla bulging with a classic Mission-district mix
+          - Ingredients: |
+              flour tortilla, seasoned beef, cilantro-lime rice, black beans, shredded cheese, pico, sour cream
+        short:
+          - Qty: 1
+          - Weight: 280 g
+          - Cal.: 550
+        price:
+          - old: $5.49
+        badge:
+          - title: Popular
+            color: blue
+        picture:
+          src: /images/products/Burrito.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAL64pYyDbJ6BV727tgAAAAAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMJOBOgBIJIAEhIADs=
+          alt: Burrito Emoji.
+            A Mexican or Tex-Mex burrito, featuring a wrapped flour tortilla filled with such ingredients as beef, rice, beans, cheese, tomato, lettuce, and sour cream.
+            Served in foil on several major platforms, suggesting a Mission burrito associated with San Francisco.
+
+      - title: Tamale
+        long:
+          - Description: |
+              Single corn-husk parcel hiding steamy masa
+          - Ingredients: |
+              corn husk, masa harina, chicken, red chile sauce, cumin
+        short:
+          - Qty: 1
+          - Weight: 120 g
+          - Cal.: 220
+        price:
+          - old: $3.49
+        badge:
+          - title: NEW
+            color: yellow
+        picture:
+          src: /images/products/Tamale.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAMiSOLR9LZNfIdqmRc6bNwAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMJCBBbRGMUJlQCADs=
+          alt: Tamale Emoji.
+            A single tamale wrapped in a corn husk.
+
+      - title: Stuffed Flatbread
+        long:
+          - Description: |
+              Pillowy pita pocket crammed like a late-night shawarma
+          - Ingredients: |
+              pita, shaved lamb, lettuce, tomato, red onion, cucumber, tahini
+        short:
+          - Qty: 1
+          - Weight: 250 g
+          - Cal.: 480
+        price:
+          - old: $4.49
+        picture:
+          src: /images/products/Stuffed Flatbread.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAJOESHRsLn96Rpt2S6yRWAAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMJCBAsQmKUsGgCADs=
+          alt: Stuffed Flatbread Emoji.
+            A flatbread, like pita, stuffed with lettuce, tomato, and/or meat.
+            Resembles a doner kebab, falafel, shawarma, or gyro sandwich, popular in the Middle East and the Mediterranean.
+            Some platforms have red onion and cucumber.
+
+      - title: Falafel
+        long:
+          - Description: |
+              Three golden chickpea orbs, one split to show the green herb center
+          - Ingredients: |
+              chickpeas, parsley, garlic, cumin, coriander, sesame-seed crust
+        short:
+          - Qty: 10
+          - Weight: 300 g
+          - Cal.: 930
+        price:
+          - old: $9.99
+            new: $7.49
+        badge:
+          - color: red
+        picture:
+          src: /images/products/Falafel.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAIhuW3FcMoRvU6ugiYWBYwAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMKCAohEkWMEsYICQA7
+          alt: Falafel Emoji.
+            Brown spheres depicting falafel, a food popular in Middle Eastern and North African cuisine, typically made of mashed chickpeas or fava beans.
+            Most platforms include three or more falafel with one piece split open to reveal a green center.
+
+      - title: Fondue
+        long:
+          - Description: |
+              Ruby pot bubbling with molten Swiss cheese and peeking forks
+          - Ingredients: |
+              Gruyère, Emmental, white wine, garlic, kirsch, nutmeg
+        short:
+          - Qty: 1
+          - Weight: 200 g
+          - Cal.: 460
+        price:
+          - old: $8.99
+        badge:
+          - title: NEW
+            color: yellow
+        picture:
+          src: /images/products/Fondue.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAANlqYUsFA3kVEKcmJNGdhNmtjwAAACH5BAEAAAAALAAAAAAEAAQAAAMJCAphFYNIIARIADs=
+          alt: Fondue Emoji.
+            A red fondue pot.
+            Most platforms show cheese fondue with fondue forks sticking out of the pot.
+
+      - title: Bento Box
+        long:
+          - Description: |
+              Compartmentalized Japanese lunchbox balancing land and sea
+          - Ingredients: |
+              steamed rice, kara-age chicken, fried shrimp, pickled plum, broccoli
+        short:
+          - Qty: 1
+          - Weight: 450 g
+          - Cal.: 700
+        price:
+          - old: $9.99
+            new: $8.99
+        badge:
+          - color: red
+        picture:
+          src: /images/products/Bento Box.svg
+          blur_hash: R0lGODlhBAAEAPIAAHpVRgAAALp4P7V+WbyimZCgXQAAAAAAACH5BAEAAAEALAAAAAAEAAQAAAMKGCExIgMUQoAFCQA7
+          alt: Bento Box Emoji.
+            A Japanese bento, a lunch box divided into portions of rice, vegetables, and meat or seafood, such as sushi or fried shrimp.
+
+      - title: Rice Cracker
+        long:
+          - Description: |
+              Crispy wheel of senbei wearing a nori belt
+          - Ingredients: |
+              glutinous rice, soy sauce, mirin, nori strip
+        short:
+          - Qty: 1
+          - Weight: 15 g
+          - Cal.: 60
+        price:
+          - old: $1.49
+        reversed: true
+        picture:
+          src: /images/products/Rice Cracker.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAADk/IDdAIJ52KsmZQtOpS8KFMwAAACH5BAEAAAAALAAAAAAEAAQAAAMKCFZk80OIAUIACQA7
+          alt: Rice Cracker Emoji.
+            A Japanese senbei, or rice cracker, wrapped with a sheet of nori, or seaweed, a snack commonly enjoyed with green tea.
+
+      - title: Rice Ball
+        long:
+          - Description: |
+              Triangular onigiri clutching a salty core
+          - Ingredients: |
+              sushi rice, umeboshi plum, nori wrap, salt
+        short:
+          - Qty: 1
+          - Weight: 110 g
+          - Cal.: 190
+        price:
+          - old: $1.99
+        badge:
+          - title: Best seller
+            color: violet
+        reversed: true
+        picture:
+          src: /images/products/Rice Ball.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAM/Pxjc5MElOO9DNxM7HwsjFvwAAACH5BAEAAAAALAAAAAAEAAQAAAMJCBFaRWYMJ4RJADs=
+          alt: Rice Ball Emoji.
+            A Japanese onigiri, a cone-shaped ball of white rice, a snack wrapped with a sheet of nori, or seaweed.
+
+      - title: Cooked Rice
+        long:
+          - Description: |
+              Plain bowl of snow-white grain simplicity
+          - Ingredients: |
+              short-grain rice, water, optional kombu dashi
+        short:
+          - Qty: 1
+          - Weight: 160 g
+          - Cal.: 240
+        price:
+          - old: $1.99
+        picture:
+          src: /images/products/Cooked Rice.svg
+          blur_hash: R0lGODlhBAAEAPIAAMG/vQAAANbUzb28u8G8u9jW0wAAAAAAACH5BAEAAAEALAAAAAAEAAQAAAMJGFWwNGONAEMCADs=
+          alt: Cooked Rice Emoji.
+            A bowl of steamed white rice, a staple component of cuisine throughout Asia.
+            Bowl color varies across platforms, though is often white.
+
+      - title: Curry Rice
+        long:
+          - Description: |
+              Rust-colored Japanese curry ladled next to fluffy rice
+          - Ingredients: |
+              white rice, potatoes, carrots, onions, beef, curry roux
+        short:
+          - Qty: 1
+          - Weight: 350 g
+          - Cal.: 620
+        price:
+          - old: $6.49
+        picture:
+          src: /images/products/Curry Rice.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAANzKu9G6q8KNb8y8o8fAtwAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMJCApRAoSMAcRLADs=
+          alt: Curry Rice Emoji.
+            A plate of orange-brown curry with vegetables or meat, served with a mound of white rice.
+            May represent kare-raisu, or Japanese curry, though commonly associated with India and other Asian cuisines.
+
+      - title: Steaming Bowl
+        long:
+          - Description: |
+              Ramen noodles swimming in smoky dashi under rising steam
+          - Ingredients: |
+              chijire noodles, pork chashu, soft egg, negi, nori
+        short:
+          - Qty: 1
+          - Weight: 400 g
+          - Cal.: 550
+        price:
+          - old: $7.49
+        picture:
+          src: /images/products/Steaming Bowl.svg
+          blur_hash: R0lGODlhBAAEAPIAALWih9vd1wAAAPDFe9C9ueK8n7KBLgAAACH5BAEAAAIALAAAAAAEAAQAAAMLKGIANqCMUQQhIAEAOw==
+          alt: Steaming Bowl Emoji.
+            A bowl of steaming-hot food.
+            Depicted as Japanese ramen (noodles in broth) with chopsticks on most platforms, though it can represent a warm meal more generally.
+
+      - title: Spaghetti
+        long:
+          - Description: |
+              Twirling fork lifts saucy ribbons of Italian comfort
+          - Ingredients: |
+              durum spaghetti, tomato passata, basil, olive oil, parmesan
+        short:
+          - Qty: 1
+          - Weight: 320 g
+          - Cal.: 580
+        price:
+          - old: $6.99
+        picture:
+          src: /images/products/Spaghetti.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAN+giK6Nc9RtOOClb+SrdNivfQAAACH5BAEAAAAALAAAAAAEAAQAAAMKCBAiVW6MAggBCQA7
+          alt: Spaghetti Emoji.
+            A plate of Italian spaghetti with tomato sauce, as a bolognese, with a fork twirling its long, thin noodles.
+
+      - title: Oden
+        long:
+          - Description: |
+              Winter skewer trio soaking in soy broth
+          - Ingredients: |
+              fishcake, konnyaku, boiled egg, daiku, soy-dashi
+        short:
+          - Qty: 1
+          - Weight: 130 g
+          - Cal.: 150
+        price:
+          - old: $3.99
+        picture:
+          src: /images/products/Oden.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAANnBm6+ARqWMfdSbYNmjbMK1pAAAACH5BAEAAAAALAAAAAAEAAQAAAMJaAMwJWwYCIRIADs=
+          alt: Oden Emoji.
+            A skewer of three bites of Japanese oden, a winter dish made with fishcakes, tofu, konnyaku, and a variety of other ingredients, including boiled eggs.
+            Often served as a stew or skewered and dipped into soy sauce.
+
+      - title: Sushi
+        long:
+          - Description: |
+              Twin nigiri showcasing ruby tuna on rice pillows
+          - Ingredients: |
+              sushi rice, tuna, wasabi, soy
+        short:
+          - Qty: 2
+          - Weight: 70 g
+          - Cal.: 120
+        price:
+          - old: $5.99
+        picture:
+          src: /images/products/Sushi.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAOp1dvewhfOQjNO8twAAAAAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMJCCI6IyE4AAhJADs=
+          alt: Sushi Emoji.
+            Japanese sushi, generally depicted as two pieces of raw pinkish-orange fish, as tuna or salmon, on white rice (nigiri).
+
+      - title: Fried Shrimp
+        long:
+          - Description: |
+              Golden panko curls guarding tender ebi
+          - Ingredients: |
+              black tiger shrimp, flour, egg, panko, oil
+        short:
+          - Qty: 3
+          - Weight: 270 g
+          - Cal.: 840
+        price:
+          - old: $14.99
+        picture:
+          src: /images/products/Fried Shrimp.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAOiSWeaCXOB5UuqCU+qsYQAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMIGFEwy6PAARIAOw==
+          alt: Fried Shrimp Emoji.
+            A prawn or shrimp breaded and deep-fried golden-brown.
+            Known as ebi furai in Japan but commonly called shrimp tempura and served in a bento box.
+
+      - title: Dango
+        long:
+          - Description: |
+              Tri-color dumpling skewer straight from a festival stall
+          - Ingredients: |
+              rice flour, red bean (pink), egg (white), matcha (green), sugar syrup
+        short:
+          - Qty: 1
+          - Weight: 85 g
+          - Cal.: 220
+        price:
+          - old: $2.49
+        badge:
+          - title: Sold out
+            color: fg
+        semi_transparent: true
+        picture:
+          src: /images/products/Dango.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAGudRcx8a8a/i5fLYfLFtQAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMIWAEQyoGsFhIAOw==
+          alt: Dango Emoji.
+            A Japanese sweet dumpling made from rice flour and served on a skewer.
+            Depicted as a botchan dango, comprising a pink, white or light yellow, and green ball, as colored by red beans, egg, and green tea.
+
+      - title: Dumpling
+        long:
+          - Description: |
+              Pleated half-moon ready for steam or sizzle
+          - Ingredients: |
+              wheat wrapper, minced pork, cabbage, ginger, scallion
+        short:
+          - Qty: 10
+          - Weight: 450 g
+          - Cal.: 1000
+        price:
+          - old: $10.49
+        badge:
+          - title: NEW
+            color: yellow
+        picture:
+          src: /images/products/Dumpling.svg
+          blur_hash: R0lGODlhBAAEAPIAAAAAAO7RnNq2h9q0hOG/junNmwAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMKKBIwQ0AUIuIQCQA7
+          alt: Dumpling Emoji.
+            A dumpling of dough and filling, as folded and pinched closed for steaming or frying.
+            Associated with cuisines around the world, including China (jiaozi), Japan (gyoza or dango), Poland (pierogi), and Spain and Latin America (empanada).
+
+  - id: posts-bottom
+    posts:
+      - Disclaimer:
+          - Not a real restaurant.
+          - Product assets, names, and the <i>«Durger King»</i> concept are used for demonstration purposes only and remain the property of their respective owners.
+            This site is not affiliated with, endorsed by, or sponsored by the original <a href="https://t.me/durgerkingbot">Durger King Telegram bot</a>.
+
+footer:
+  company: Andreas
+  copyright: |
+    Licensed under <a href="https://github.com/C0BECTb/lume-theme-simple-landing-page/blob/master/LICENSE">MIT</a>.
+  footnotes:
+    - Any applicable taxes are calculated at checkout based on your location.
+    - All products, descriptions and prices are subject to change at any time without notice.
+
+###
+
+shields:
+  - href: https://lume.land/
+    image:
+      src: /images/shields/Built with - Lume.svg
+      width: 121
+      blur_hash: R0lGODlhBAAEAPIAAAAAADg/QXd4eHR0dGRkZVdYWQAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMJWARAU0GIQgtLADs=
+      alt: "Badge with text: Built with - Lume"
+
+  - href: https://github.com/C0BECTb/lume-theme-simple-landing-page/
+    image:
+      src: /images/shields/Using - Simple Landing Page theme.svg
+      width: 223
+      blur_hash: R0lGODlhBAAEAPIAAGRQTwAAAIRZVuSTW96APgAAAAAAAAAAACH5BAEAAAEALAAAAAAEAAQAAAMJCDQk8+6BQEICADs=
+      alt: "Badge with text: Using - Simple Landing Page theme"
+
+  - href: https://deno.com/
+    image:
+      src: /images/shields/Powered by - Deno.svg
+      width: 131
+      blur_hash: R0lGODlhBAAEAPEAAD4+PgAAAHX1rWjWmSH5BAEAAAEALAAAAAAEAAQAAAIHjAU2GQswCgA7
+      alt: "Badge with text: Powered by - Deno"
+
+  - href: https://pages.github.com/
+    image:
+      src: /images/shields/Runs on - GitHub Pages.svg
+      width: 157
+      blur_hash: R0lGODlhBAAEAPEAAC8zOGNjYwAAAAAAACH5BAEAAAIALAAAAAAEAAQAAAIHFB6iKXlQAAA7
+      alt: "Badge with text: Runs on - GitHub Pages"
+
+  # - href: https://docs.gitlab.com/ee/user/project/pages/
+  #   image:
+  #     src: /images/shields/Runs on - GitLab Pages.svg
+  #     width: 153
+  #     blur_hash: R0lGODlhBAAEAPEAAAAAAOxsLIJoW+WHWCH5BAEAAAAALAAAAAAEAAQAAAIHBBICM8aGCgA7
+  #     alt: "Badge with text: Runs on - GitLab Pages"
+
+  # - href: https://deno.com/deploy
+  #   image:
+  #     src: /images/shields/Runs on - Deno Deploy.svg
+  #     width: 153
+  #     blur_hash: R0lGODlhBAAEAPIAAAAAAF5maAu47kO84jTB7QAAAAAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMJGCASQcSNAZZIADs=
+  #     alt: "Badge with text: Runs on - Deno Deploy"
+
+  # - href: https://www.netlify.com/
+  #   image:
+  #     src: /images/shields/Runs on - Netlify.svg
+  #     width: 117
+  #     blur_hash: R0lGODlhBAAEAPIAAF1iYQAAACqnnCS5rU2lnTrEuQAAAAAAACH5BAEAAAEALAAAAAAEAAQAAAMICBCjVA6ukQAAOw==
+  #     alt: "Badge with text: Runs on - Netlify"
+
+  # - href: https://vercel.com/
+  #   image:
+  #     src: /images/shields/Runs on - Vercel - black.svg
+  #     width: 117
+  #     blur_hash: R0lGODlhBAAEAPIAAAAAADAwMA0NDVJSUnBwcAAAAAAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMIOCMyBMFBxRIAOw==
+  #     alt: "Badge with text: Runs on - Vercel"
+
+  # - href: https://pages.cloudflare.com/
+  #   image:
+  #     src: /images/shields/Runs on - Cloudflare Pages.svg
+  #     width: 175
+  #     blur_hash: R0lGODlhBAAEAPIAAAAAAF9fXsF5PeuELd+SUgAAAAAAAAAAACH5BAEAAAAALAAAAAAEAAQAAAMIGDCjRA6ukQAAOw==
+  #     alt: "Badge with text: Runs on - Cloudflare Pages"
+
+  # - href: https://render.com/
+  #   image:
+  #     src: /images/shields/Runs on - Render - black.svg
+  #     width: 121
+  #     blur_hash: R0lGODlhBAAEAPIAAAkJCTY2NgAAAFJSUnFxcQAAAAAAAAAAACH5BAEAAAIALAAAAAAEAAQAAAMJOCMwJMFBBUACADs=
+  #     alt: "Badge with text: Runs on - Render"
+
+  # - href: https://kinsta.com/
+  #   image:
+  #     src: /images/shields/Runs on - Kinsta.svg
+  #     width: 117
+  #     blur_hash: R0lGODlhBAAEAPIAAGJiYgAAAF5Kvm9huVQ333Fb2wAAAAAAACH5BAEAAAEALAAAAAAEAAQAAAMICBCkUg4ukgAAOw==
+  #     alt: "Badge with text: Runs on - Kinsta"
+
+  # - href: https://www.clever-cloud.com/
+  #   image:
+  #     src: /images/shields/Runs on - Clever Cloud.svg
+  #     width: 153
+  #     blur_hash: R0lGODlhBAAEAPIAABwgNyUqQXJycgAAAFBRWwAAAAAAAAAAACH5BAEAAAMALAAAAAAEAAQAAAMJSBQhSmK8AEACADs=
+  #     alt: "Badge with text: Runs on - Clever Cloud"

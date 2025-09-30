@@ -1,0 +1,10 @@
+{{ for title, text of obj }}
+  <div class="bordered-box">
+    <span class="bordered-box-title">
+      {{- title -}}
+    </span>
+    <p class="bordered-box-body">
+      {{ text }}
+    </p>
+  </div>
+{{ /for }}

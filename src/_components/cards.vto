@@ -1,0 +1,34 @@
+<ul class="landing-cards" id="{{ id || 'cards' }}">
+  {{ for item of cards }}
+
+    <li class="landing-cards-product hover-attention {{ if item.semi_transparent }}semi-transparent{{ /if }}">
+
+      {{ if item.badge }}
+        {{ comp.badges({ item }) }}
+      {{ /if }}
+
+      {{ if item.picture }}
+        {{ comp.picture({ picture: item.picture, width: 150, height: 150 }) }}
+      {{ /if }}
+
+      {{ if ( item.title || item.description || item.price ) }}
+        <div class="landing-cards-body">
+
+          {{ if item.title }}
+            <h2>{{ item.title }}</h2>
+          {{ /if }}
+
+          {{ if item.description }}
+            <p class="landing-cards-description">
+              {{ item.description }}
+            </p>
+          {{ /if }}
+
+          {{ comp.price({ item, type: "cards" }) }}
+
+        </div>
+      {{ /if }}
+
+    </li>
+  {{ /for }}
+</ul>

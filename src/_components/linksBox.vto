@@ -1,0 +1,10 @@
+<ul class="footer-links links-box">
+  {{ for item of links }}
+    <li>
+        <a href="{{ item.href }}" aria-label="{{ item.label }}">
+        {{ item.svg }}
+        {{- item.title.replace(/ /g, '&nbsp;') -}}
+      </a>
+    </li>
+  {{ /for }}
+</ul>

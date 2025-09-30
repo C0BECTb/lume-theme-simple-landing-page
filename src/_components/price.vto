@@ -1,0 +1,34 @@
+{{ for object of item.price }}
+{{ if ( item.semi_transparent && object.new ) }}
+  <p class="price price-old">
+    {{ object.new }}
+  </p>
+{{ else if ( item.semi_transparent && object.old ) }}
+  <p class="price price-old">
+    {{ object.old }}
+  </p>
+{{ else if ( object.old && object.new ) }}
+  {{ if type === "catalog" }}
+    <div class="landing-catalog-figure-footer price-sale">
+  {{ else if type === "cards" }}
+    <div class="landing-cards-footer price-sale">
+  {{ else }}
+    <div class="price-sale">
+  {{ /if }}
+      <p class="price price-new shine">
+        {{ object.new }}
+      </p>
+      <p class="price price-old">
+        {{ object.old }}
+      </p>
+  </div>
+{{ else if object.new }}
+  <p class="price price-new shine">
+    {{ object.new }}
+  </p>
+{{ else if object.old }}
+  <p class="price price-new shine">
+    {{ object.old }}
+  </p>
+{{ /if }}
+{{ /for }}
