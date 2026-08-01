@@ -71,7 +71,8 @@ page_css: landing.css
 
       {{ if footer.copyright }}
         <p class="landing-footer-copyright">
-          {{ icons.copyright }} {{ Temporal.Now.plainDateTimeISO().year }} {{ footer.company || metas.site }}. {{ footer.copyright }}
+          {{ icons.copyright }} {{ Temporal.Now.plainDateTimeISO().year }} {{ footer.company || metas.site }}.
+	  {{ if typeof footer.copyright === 'string' }}{{ footer.copyright }}{{ /if }}
         </p>
       {{ /if }}
 
